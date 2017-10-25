@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get 'home/index'
+  get 'gossip/index'
 
- root '#index'
+ root 'gossips#index'
+ 
  resources:gossips 
 end
