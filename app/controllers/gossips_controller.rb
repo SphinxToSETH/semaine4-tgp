@@ -1,7 +1,7 @@
 class GossipsController < ApplicationController
 	
 def new 
-		@new_gossip=Gossip.new
+		@gossip=Gossip.new
 end
 
 
@@ -44,7 +44,7 @@ def destroy
 
 private
    def gossip_params
-   params.require(:gossip).permit(:anonymous_author, :content)
+   params.permit(:anonymous_author, :content)
   end
 
 end

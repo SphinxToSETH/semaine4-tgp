@@ -6,3 +6,9 @@
 
 	<%= submit_tag "modifies ton gossip"%>
 <% end %>
+
+
+ <td><%= link_to 'Destoy gossip', gossip_path(gossip),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+<%= link_to 'Retour à la liste des gossips', gossip_path %>
