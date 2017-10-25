@@ -1,7 +1,7 @@
 class GossipsController < ApplicationController
 	
 def new 
-		@gossip=Gossip.new
+		@new_gossip=Gossip.new
 end
 
 
@@ -19,7 +19,7 @@ def edit
 end
 
 def create
-  @gossip = Gossip.new(gossip_params)
+  @gossip = Gossip.create(gossip_params)
   	if @gossip.save
   		redirect_to @gossip
   	else 
