@@ -2,20 +2,23 @@
  
 <table>
   <tr>
-    <th>anonymous_author</th>
-    <th>content</th>
+    <th>author</th>
+    <th>gossip</th>
   </tr>
  
-  <% @gossips.each do |article| %>
+  <% @gossips.each do |gossip| %>
     <tr>
       <td><%= gossip.anonymous_author%></td>
       <td><%= gossip.content %></td>
       <td><%= link_to 'Montrer le gossip', gossip_path(gossip) %></td>
       %></td>
+      <td><%= link_to 'edit', edit_gossip_path(gossip) %></td>
       <td><%= link_to 'Destroy', gossip_path(gossip),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>
+
+
 

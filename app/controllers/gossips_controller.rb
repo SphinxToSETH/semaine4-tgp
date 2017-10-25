@@ -44,7 +44,7 @@ def destroy
 
 private
    def gossip_params
-    params.permit(:anonymous_author, :content)
+   params.require(:gossip).permit(:anonymous_author, :content)
   end
 
 end
