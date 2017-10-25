@@ -1,0 +1,9 @@
+<h1>mon gossip!</h1>
+<h2> <%= @gossip.anonymous_author %> </h2>
+
+
+<p> <%= link_to("Editer le gossip", edit_gossip_path) %></p>
+
+<p> <%= link_to("revenir à la liste des gossip", gossips_path) %></p>
+
+<p><%= link_to 'Clique pour détruire', @gossip, method: :delete %></p>
